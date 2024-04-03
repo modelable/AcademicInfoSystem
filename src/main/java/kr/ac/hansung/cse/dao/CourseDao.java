@@ -44,7 +44,7 @@ public class CourseDao {
     }
 
     public List<Object[]> getYearSemesterCredit() {
-        String sqlStatement = "SELECT Course_Year, Semester, SUM(Credit) AS TotalCredit FROM Courses GROUP BY Course_Year, Semester";
+        String sqlStatement = "SELECT Course_Year, Semester, SUM(Credit) AS TotalCredit FROM Courses GROUP BY Course_Year, Semester ORDER BY Course_Year, Semester";
         return jdbcTemplate.query(sqlStatement, (rs, rowNum) -> {
             int year = rs.getInt("Course_Year");
             int semester = rs.getInt("Semester");
