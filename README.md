@@ -1,1 +1,1 @@
-# Spring MVC Template for intellij
+# Spring MVC homework
